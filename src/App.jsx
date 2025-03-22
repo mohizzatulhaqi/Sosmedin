@@ -51,7 +51,7 @@ const App = () => {
       setPosts((prevPosts) =>
         prevPosts.map((post) =>
           post.id === postId
-            ? { ...post, likes: post.likes + (isLiked ? -0.5 : 0.5) }
+            ? { ...post, likes: Math.round(post.likes + (isLiked ? -1 : 1)) }
             : post
         )
       );
