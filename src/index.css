@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.title {
+  color: #1a73e8;
+  font-size: 24px;
+}
+
+.post-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-form input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.post-form .image-upload input {
+  display: none;
+}
+
+.post-form button {
+  background: #1a73e8;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.post {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: black;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: gray;
+}
+
+.post-text {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.like-button {
+  color: red;
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete-button {
+  color: black;
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+}
