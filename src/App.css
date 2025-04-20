@@ -1,4 +1,3 @@
-/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
@@ -159,13 +158,17 @@ body {
 }
 
 .menu-dropdown button {
-  background: none;
+  background: transparent;
   border: none;
+  outline: none;
+  box-shadow: none;
   padding: 5px 10px;
   cursor: pointer;
   font-size: 14px;
   width: 100%;
   text-align: left;
+  color: #262626;
+  background: white;
 }
 
 .menu-dropdown button:hover {
@@ -176,7 +179,7 @@ body {
 /* Post Content */
 .post-content {
   margin: 10px 0;
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
 }
 
@@ -300,4 +303,493 @@ body {
 .icon-action {
   width: 20px; 
   height: 20px;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  
+}
+
+/* Tombol Kembali */
+.back-button {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Judul "Profil" */
+.profile-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Kontainer Info Profil */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Foto Profil */
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #000;
+  margin-bottom: 10px;
+}
+
+
+.profile-info::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 16px;
+}
+
+.profile-stats {
+  text-align: center;
+}
+
+.profile-stats h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.profile-stats p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.profile-page {
+  background-color: #fff;
+  min-height: 100vh; /* Biar tinggi minimum sama dengan tinggi layar */
+  display: flex;
+  flex-direction: column;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: #3897f0;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.logout-button:hover {
+  opacity: 0.8;
+}
+
+/* Comment Section Styles */
+.comments-section {
+  margin-top: 15px;
+  padding: 0 15px;
+  border-top: 1px solid #efefef;
+}
+
+.comment-input {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #efefef;
+}
+
+.comment-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover;
+}
+
+.comment-input input {
+  flex: 1;
+  border: none;
+  padding: 8px 12px;
+  background: #fafafa;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.comment-input button {
+  margin-left: 8px;
+  background: transparent;
+  border: none;
+  color: #0095f6;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.comment-input button:disabled {
+  color: #b3dffd;
+  cursor: default;
+}
+
+.comments-list {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* Individual Comment Styles */
+.comment {
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.comment.reply {
+  margin-left: 44px;
+  padding-left: 0;
+  border-left: none;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.comment-user {
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.comment-content {
+  font-size: 17px;
+  line-height: 1.4;
+ margin-right: 410px;
+  margin-bottom: 6px;
+}
+
+.comment-actions {
+  margin-left: 44px;
+  display: flex;
+  gap: 12px;
+}
+
+.comment-actions button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  color: #8e8e8e;
+  cursor: pointer;
+}
+
+.comment-actions button:hover {
+  color: #262626;
+}
+
+/* Reply Form Styles */
+.reply-form {
+  margin-top: 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #fafafa;
+}
+
+.reply-form textarea {
+  width: 100%;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  resize: none;
+  min-height: 40px;
+  outline: none;
+  background-color: transparent;
+  margin-bottom: 8px;
+}
+
+.reply-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.reply-actions button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.reply-actions button:first-child {
+  background: #efefef;
+  border: none;
+  color: #262626;
+}
+
+.reply-actions button:last-child {
+  background: #0095f6;
+  color: white;
+  border: none;
+}
+
+.reply-actions button:hover {
+  opacity: 0.9;
+}
+
+/* Edit Comment Styles */
+.edit-comment {
+  margin-left: 44px;
+}
+
+.edit-comment textarea {
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+  resize: none;
+  min-height: 60px;
+  outline: none;
+  margin-bottom: 8px;
+}
+
+.edit-comment-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.edit-comment-buttons button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.edit-comment-buttons button:first-child {
+  background: #efefef;
+  border: none;
+}
+
+.edit-comment-buttons button:last-child {
+  background: #0095f6;
+  color: white;
+  border: none;
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 60px;
+  margin-right: 55px;
+  padding: 8px 0;
+}
+
+/* Empty State */
+.no-comments {
+  text-align: center;
+  color: #8e8e8e;
+  font-size: 14px;
+  padding: 16px 0;
+}
+
+/* Scrollbar Styling */
+.comments-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.comments-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.comments-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.comments-list::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+.comment-menu {
+  position: relative;
+  margin-left: auto;
+}
+
+.comment-menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #8e8e8e;
+
+}
+
+.comment-dropdown {
+  position: absolute;
+  top: 100%; 
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 10;
+
+}
+
+.comment-dropdown button {
+  display: block;
+  width: 80%;
+  padding: 8px 16px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #262626;
+}
+
+.comment-dropdown button:hover {
+  background: #fafafa;
+}
+
+.comment-dropdown button:first-child {
+  border-bottom: 1px solid #efefef;
+}
+
+/* Login Register */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+}
+
+.auth-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+.auth-welcome {
+  margin-bottom: 2rem;
+  text-align: left;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.auth-welcome h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  font-weight: normal;
+}
+
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #3897f0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.auth-button:disabled {
+  background-color: #b2dffc;
+  cursor: not-allowed;
+}
+
+.auth-error {
+  color: #ed4956;
+  margin: 1rem 0;
+}
+
+.auth-footer {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.auth-toggle {
+  color: #3897f0;
+  cursor: pointer;
+}
+
+.forgot-password {
+  color: #003569;
+  cursor: pointer;
+}
+
+.auth-page {
+  background-color: #fafafa;
+}
+
+
+.character-counter {
+  text-align: right;
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.character-counter.over-limit {
+  color: red;
 }
